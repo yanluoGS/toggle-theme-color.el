@@ -1,0 +1,26 @@
+#+TITLE: toggle-theme-color.el
+#+SUBTITLE: Convenient Theme Toggling for Emacs
+
+* Overview
+A minimalist Emacs package that provides =toggle-theme-color= function to switch between dark/light theme variants. Designed for themes following the =-dark= / =-light= naming convention (e.g., =modus-vivendi-dark= / =modus-operandi-light=).
+
+* Installation
+Clone or place this file in your load path, then add to init file:
+#+BEGIN_SRC emacs-lisp
+(require 'toggle-theme-color)
+#+END_SRC
+
+* Configuration
+Preload your theme pairs (both variants must be available):
+#+BEGIN_SRC emacs-lisp
+(load-theme 'theme-name-dark t)
+(load-theme 'theme-name-light t)
+#+END_SRC
+
+* Usage
+Execute =M-x toggle-theme-color= to:
+- Disable current theme
+- Activate counterpart theme
+
+* Requirements
+- Theme names MUST end with =-dark= or =-light=
